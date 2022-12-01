@@ -1,0 +1,20 @@
+.buttoncolor:hover {
+  color: #6e65ef;
+}
+.button-color-sign-up {
+  background-color: #6e65ef;
+  border-radius: 7px;
+}
+
+.button-color-login {
+  color: #6e65ef;
+}
+
+.icon-size {
+  width: 110px;
+  height: 25px;
+}
+
+.Navbar {
+  background-color: rgb(255, 255, 255) !important;
+}
