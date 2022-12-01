@@ -1,14 +1,16 @@
 import React from "react";
 import "./Filter.css";
-function Filter({ lable, choose }) {
+function Filter({ lable, choose, option }) {
   return (
-    <main className="d-flex px-2 filter-border" style={{ flex: 1 }}>
+    <main className="d-flex px-2 filter-border  " style={{ flex: 1 }}>
       <div className="  w-100">
         <label for="inputState" className="form-label">
           <b> {lable}</b>
         </label>
-        <select id="inputState" className="form-select ">
-          <option selected>{choose}</option>
+        <select id="inputState" className="form-select  border-0">
+          <option className="" selected>
+            {choose}
+          </option>
           <option>delhi</option>
           <option>pune</option>
           <option>kolkata</option>

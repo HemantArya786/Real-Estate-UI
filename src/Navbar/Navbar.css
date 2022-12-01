@@ -1,5 +1,6 @@
 .buttoncolor:hover {
   color: #6e65ef;
+  background-color: #dddce3;
 }
 .button-color-sign-up {
   background-color: #6e65ef;
@@ -7,7 +8,7 @@
 }
 
 .button-color-login {
-  color: #6e65ef;
+  color: #6e65ef !important;
 }
 
 .icon-size {

@@ -8,7 +8,7 @@ function Heading() {
         </h1>
       </div>
       <div className="  col-4">
-        <select id="inputState" className="form-select ">
+        <select id="inputState" className="form-select border-0 ">
           <option selected>Search with Searchbar</option>
           <option>delhi</option>
           <option>pune</option>

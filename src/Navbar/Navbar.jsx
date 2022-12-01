@@ -42,7 +42,7 @@ function Navbar() {
       </div>
       <div className=" d-flex gap-3 col-3  ">
         <div className=" d-flex align-items-center ">
-          <button className="btn border button-color-login px-4 py-2 ">
+          <button className="btn border border-2 button-color-login px-4 py-2 ">
             <b>Login</b>
           </button>
         </div>
