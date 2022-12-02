@@ -3,6 +3,7 @@ import Navbar from "./Navbar/Navbar";
 import Filter from "./Filter/FilterSection";
 import CartCard from "./Cartcard/CartCards";
 import Heading from "./Heading/Heading";
+import Data from "./Content/Data";
 
 function App() {
   return (
@@ -37,49 +38,17 @@ function App() {
           </div>
         </div>
         <div className="d-flex flex-wrap   ">
-          <CartCard
-            title={"Palm Harbor"}
-            bed={"2 beds"}
-            bathroom={"2 bathrooms"}
-            area={"3x10m2"}
-            price={"4,500"}
-          />
-          <CartCard
-            classname={"px-3"}
-            title={"home"}
-            bed={"2 beds"}
-            bathroom={"2 bathrooms"}
-            area={"3x10m2"}
-            price={"4,500"}
-          />
-          <CartCard
-            title={"Faulkner Ave"}
-            bed={"2 beds"}
-            bathroom={"3 bathrooms"}
-            area={"3x10m2"}
-            price={"4,500"}
-          />
-          <CartCard
-            title={"home"}
-            bed={"2 beds"}
-            bathroom={"1 bathrooms"}
-            area={"3x10m2"}
-            price={"4,500"}
-          />
-          <CartCard
-            title={"home"}
-            bed={"2 beds"}
-            bathroom={" 2 bathrooms"}
-            area={"3x10m2"}
-            price={"4,500"}
-          />
-          <CartCard
-            title={"home"}
-            bed={"2 beds"}
-            bathroom={"3 bathrooms"}
-            area={"3x10m2"}
-            price={"4,500"}
-          />
+          {Data.map((item) => (
+            <CartCard
+              image={item.image}
+              title={item.title}
+              bed={item.room}
+              area={"3x10m2"}
+              price={item.price}
+              dis={item.dis}
+              bathroom={item.bathroom}
+            />
+          ))}
         </div>
       </section>
     </main>

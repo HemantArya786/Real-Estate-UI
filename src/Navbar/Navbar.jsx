@@ -9,7 +9,7 @@ function Navbar() {
       <div className=" col-2  justify-content-center align-items-center d-flex">
         <img src={logo} className="icon-size " alt="error" />
       </div>
-      <div className=" col-8 d-flex gap-3  mt-2 mb-4  ">
+      <div className=" col-8 d-flex gap-3 flex-wrap mt-2 mb-4  ">
         <span className=" p-3 buttoncolor rounded d-flex align-items-center">
           <p className="m-0">
             <b>Rent</b>

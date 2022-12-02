@@ -5,18 +5,23 @@ import { TbBath } from "react-icons/tb";
 import { CiSquareAlert } from "react-icons/ci";
 import { FiHeart } from "react-icons/fi";
 
-function CartCard({ classname, title, bed, bathroom, area, price }) {
+function CartCard({
+  classname,
+  title,
+  bed,
+  bathroom,
+  area,
+  price,
+  dis,
+  image,
+}) {
   return (
     <main
       //  className={`col-sm-4 my-3 gap-3 border border-success d-flex justify-content-center ${classname}`}
       className="col-sm-4 my-3 px-3  d-flex justify-content-center     "
     >
       <div className="card ">
-        <img
-          src="https://img.staticmb.com/mbcontent//images/uploads/2022/5/modern-kerala-house-design.jpg"
-          className="card-img-top"
-          alt="err"
-        />
+        <img src={image} className="card-img-top" alt="err" />
         <div className="card-body">
           <div className="d-flex justify-content-between ">
             <h1 className="d-flex">
@@ -32,7 +37,7 @@ function CartCard({ classname, title, bed, bathroom, area, price }) {
           <h5 className="card-title">
             <b>{title}</b>
           </h5>
-          <p className="card-text para-color">bulk of the card's content.</p>
+          <p className="card-text para-color">{dis}</p>
           <div className="d-flex border-top">
             <div className="col-sm-4 gap-2 d-flex my-3 justify-content-center align-items-center">
               <div>
