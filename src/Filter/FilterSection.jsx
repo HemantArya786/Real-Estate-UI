@@ -5,7 +5,7 @@ function Filter({ lable, choose }) {
     <main className="d-flex px-2 filter-border  " style={{ flex: 1 }}>
       <div className="  w-100">
         <label className="form-label">
-          <b> {lable}</b>
+          <b className="lable-color"> {lable}</b>
         </label>
         <select id="inputState" className="form-select border-0">
           <option className="" selected>

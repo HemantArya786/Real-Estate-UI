@@ -5,3 +5,7 @@
 .filter-border {
   border-right: 1px solid black;
 }
+
+.lable-color {
+  color: rgb(118, 127, 134);
+}

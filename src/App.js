@@ -7,7 +7,7 @@ import Heading from "./Heading/Heading";
 function App() {
   return (
     <main className="App ">
-      <div className="">
+      <div>
         <Navbar />
       </div>
       <section className=" container py-3 ">

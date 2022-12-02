@@ -9,7 +9,7 @@ function CartCard({ classname, title, bed, bathroom, area, price }) {
   return (
     <main
       //  className={`col-sm-4 my-3 gap-3 border border-success d-flex justify-content-center ${classname}`}
-      className="col-sm-4 my-2 gap-3  d-flex justify-content-center  px-2  "
+      className="col-sm-4 my-3 px-3  d-flex justify-content-center     "
     >
       <div className="card ">
         <img
@@ -23,33 +23,35 @@ function CartCard({ classname, title, bed, bathroom, area, price }) {
               <h5>
                 <b className="price-color">${price}</b>
               </h5>
-              <h6>/months</h6>
+              <h6 className="months-color">/months</h6>
             </h1>
             <button className="btn border m-1 rounded-circle">
               <FiHeart className="icon-color" />
             </button>
           </div>
-          <h5 className="card-title">{title}</h5>
-          <p className="card-text">bulk of the card's content.</p>
-          <div className="d-flex">
-            <div className="col-sm-4 gap-2 d-flex justify-content-center align-items-center">
+          <h5 className="card-title">
+            <b>{title}</b>
+          </h5>
+          <p className="card-text para-color">bulk of the card's content.</p>
+          <div className="d-flex border-top">
+            <div className="col-sm-4 gap-2 d-flex my-3 justify-content-center align-items-center">
               <div>
                 <BiBed className="icon-color" />
               </div>
 
-              <div>{bed}</div>
+              <div className="cate-color  ">{bed}</div>
             </div>
-            <div className="col-4 gap-1 d-flex justify-content-center align-items-center ">
+            <div className="col-sm-4  d-flex justify-content-center align-items-center ">
               <div>
                 <TbBath className="icon-color" />
               </div>
-              <div className=""> {bathroom}</div>
+              <div className="cate-color"> {bathroom}</div>
             </div>
-            <div className="col-4 gap-2  d-flex justify-content-center align-items-center">
+            <div className="col-sm-4 gap-2  d-flex justify-content-center align-items-center">
               <div>
                 <CiSquareAlert className="icon-color" />
               </div>
-              <div>{area}</div>
+              <div className="cate-color">{area}</div>
             </div>
           </div>
         </div>
