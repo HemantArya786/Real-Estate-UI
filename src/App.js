@@ -17,8 +17,13 @@ function App() {
   };
   const filterPrice = (e) => {
     const price = e.target.value;
-    let newPriselist = Data.filter((item) => item.price === price);
-    setHouses(newPriselist);
+    let newPricelist = Data.filter((item) => item.price === price);
+    setHouses(newPricelist);
+  };
+  const filterProperty = (e) => {
+    const Property = e.target.value;
+    const newProperty = Data.filter((item) => item.property === Property);
+    setHouses(newProperty);
   };
   return (
     <main className="App ">
@@ -43,10 +48,21 @@ function App() {
           />
           <Filter
             lable={" price"}
-            choose={["1100", "1200", "1500", "1000", "1600"]}
+            choose={["1100", "1200", "1500", "1000", "1600", "900", "2200"]}
             onChange={filterPrice}
           />
-          <Filter lable={" Property type"} choose={["house"]} />
+          <Filter
+            lable={" Property type"}
+            choose={[
+              "house",
+              "flat",
+              "penthouse",
+              "apartment",
+              "land",
+              "guesthouse",
+            ]}
+            onChange={filterProperty}
+          />
           <div
             style={{ flex: 1 }}
             className=" d-flex justify-content-center  my-2 "

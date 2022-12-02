@@ -9,6 +9,7 @@ const Data = [
     bathroom: "1 bathroom",
     location: "Noida",
     area: "3x10m2",
+    property: "guesthouse",
   },
   {
     image:
@@ -20,6 +21,7 @@ const Data = [
     bathroom: "1 bathroom",
     location: "Goa",
     area: "3x10m2",
+    property: "land",
   },
   {
     image:
@@ -31,6 +33,7 @@ const Data = [
     bathroom: "1 bathroom",
     location: "Pune",
     area: "3x10m2",
+    Property: "penthouse",
   },
   {
     image:
@@ -42,6 +45,7 @@ const Data = [
     bathroom: "1 bathroom",
     location: "Agra",
     area: "3x10m2",
+    property: "land",
   },
   {
     image:
@@ -53,6 +57,7 @@ const Data = [
     bathroom: "1 bathroom",
     location: "Noida",
     area: "3x10m2",
+    property: "flat",
   },
   {
     image:
@@ -64,6 +69,7 @@ const Data = [
     bathroom: "2 bathroom",
     location: "Gurugram",
     area: "3x10m2",
+    property: "guesthouse",
   },
   {
     image:
@@ -75,6 +81,7 @@ const Data = [
     bathroom: "1 bathroom",
     location: "Noida",
     area: "3x10m2",
+    property: "house",
   },
   {
     image:
@@ -86,6 +93,7 @@ const Data = [
     bathroom: "1 bathroom",
     location: "Goa",
     area: "3x10m2",
+    property: "flat",
   },
   {
     image:
@@ -97,6 +105,7 @@ const Data = [
     bathroom: "2 bathroom",
     location: "Agra",
     area: "3x10m2",
+    property: "apartment",
   },
 ];
 
