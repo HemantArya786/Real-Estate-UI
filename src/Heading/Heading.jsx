@@ -1,5 +1,5 @@
 import React from "react";
-function Heading() {
+function Heading({ search }) {
   return (
     <div className="d-flex justify-content-between">
       <div className="">
@@ -10,10 +10,9 @@ function Heading() {
       <div className="  col-4">
         <select id="inputState" className="form-select border-0 ">
           <option selected>Search with Searchbar</option>
-          <option>delhi</option>
-          <option>pune</option>
-          <option>kolkata</option>
-          <option>goa</option>
+          {search.map((item) => (
+            <option>{item}</option>
+          ))}
         </select>
       </div>
     </div>

@@ -1,20 +1,19 @@
 import React from "react";
 import "./Filter.css";
-function Filter({ lable, choose, option }) {
+function Filter({ lable, choose }) {
   return (
     <main className="d-flex px-2 filter-border  " style={{ flex: 1 }}>
       <div className="  w-100">
-        <label for="inputState" className="form-label">
+        <label className="form-label">
           <b> {lable}</b>
         </label>
-        <select id="inputState" className="form-select  border-0">
+        <select id="inputState" className="form-select border-0">
           <option className="" selected>
-            {choose}
+            Choose
           </option>
-          <option>delhi</option>
-          <option>pune</option>
-          <option>kolkata</option>
-          <option>goa</option>
+          {choose.map((item) => (
+            <option>{item}</option>
+          ))}
         </select>
       </div>
     </main>

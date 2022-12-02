@@ -19,12 +19,12 @@ function CartCard({ classname, title, bed, bathroom, area, price }) {
         />
         <div className="card-body">
           <div className="d-flex justify-content-between ">
-            <p className="d-flex">
+            <h1 className="d-flex">
               <h5>
                 <b className="price-color">${price}</b>
               </h5>
-              <small>/months</small>
-            </p>
+              <h6>/months</h6>
+            </h1>
             <button className="btn border m-1 rounded-circle">
               <FiHeart className="icon-color" />
             </button>
@@ -32,24 +32,24 @@ function CartCard({ classname, title, bed, bathroom, area, price }) {
           <h5 className="card-title">{title}</h5>
           <p className="card-text">bulk of the card's content.</p>
           <div className="d-flex">
-            <div className="col-3 border">
-              <span>
+            <div className="col-sm-4 gap-2 d-flex justify-content-center align-items-center">
+              <div>
                 <BiBed className="icon-color" />
-              </span>
+              </div>
 
-              <p>{bed}</p>
+              <div>{bed}</div>
             </div>
-            <div className="col-5 border">
-              <span>
+            <div className="col-4 gap-1 d-flex justify-content-center align-items-center ">
+              <div>
                 <TbBath className="icon-color" />
-              </span>
-              <p> {bathroom}</p>
+              </div>
+              <div className=""> {bathroom}</div>
             </div>
-            <div className="col-4 border">
-              <span>
+            <div className="col-4 gap-2  d-flex justify-content-center align-items-center">
+              <div>
                 <CiSquareAlert className="icon-color" />
-              </span>
-              <p>{area}</p>
+              </div>
+              <div>{area}</div>
             </div>
           </div>
         </div>
