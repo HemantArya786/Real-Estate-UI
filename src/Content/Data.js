@@ -10,6 +10,7 @@ const Data = [
     location: "Noida",
     area: "7x10m2",
     property: "guesthouse",
+    date: "27.10.2019",
   },
   {
     image:
@@ -22,6 +23,7 @@ const Data = [
     location: "Goa",
     area: "2x10m2",
     property: "land",
+    date: "22.10.2019",
   },
   {
     image:
@@ -34,6 +36,7 @@ const Data = [
     location: "Pune",
     area: "5x10m2",
     property: "penthouse",
+    date: "25.10.2019",
   },
   {
     image:
@@ -46,6 +49,7 @@ const Data = [
     location: "Agra",
     area: "4x10m2",
     property: "land",
+    date: "24.10.2019",
   },
   {
     image:
@@ -58,6 +62,7 @@ const Data = [
     location: "Noida",
     area: "7x10m2",
     property: "flat",
+    date: "23.10.2019",
   },
   {
     image:
@@ -70,6 +75,7 @@ const Data = [
     location: "Gurugram",
     area: "5x10m2",
     property: "guesthouse",
+    date: "26.10.2019",
   },
   {
     image:
@@ -82,6 +88,7 @@ const Data = [
     location: "Noida",
     area: "4x10m2",
     property: "house",
+    date: "22.10.2019",
   },
   {
     image:
@@ -94,6 +101,7 @@ const Data = [
     location: "Goa",
     area: "2x10m2",
     property: "flat",
+    date: "24.10.2019",
   },
   {
     image:
@@ -106,6 +114,7 @@ const Data = [
     location: "Agra",
     area: "5x10m2",
     property: "apartment",
+    date: "23.10.2019",
   },
   {
     image:
@@ -118,6 +127,7 @@ const Data = [
     location: "pune",
     area: "2x10m2",
     property: "apartment",
+    date: "24.10.2019",
   },
   {
     image:
@@ -130,6 +140,7 @@ const Data = [
     location: "pune",
     area: "3x10m2",
     property: "penthouse",
+    date: "25.10.2019",
   },
   {
     image:
@@ -142,6 +153,7 @@ const Data = [
     location: "pune",
     area: "3x10m2",
     property: "house",
+    date: "26.10.2019",
   },
 ];
 

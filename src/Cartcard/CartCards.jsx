@@ -5,13 +5,10 @@ import { TbBath } from "react-icons/tb";
 import { CiSquareAlert } from "react-icons/ci";
 import { FiHeart } from "react-icons/fi";
 
-function CartCard({ classname, data }) {
+function CartCard({ data }) {
   const { title, room, bathroom, area, price, dis, image } = data;
   return (
-    <main
-      //  className={`col-sm-4 my-3 gap-3 border border-success d-flex justify-content-center ${classname}`}
-      className="col-sm-4 my-3 px-3  d-flex justify-content-center     "
-    >
+    <main className="col-sm-4 my-3 px-3  d-flex justify-content-center     ">
       <div className="card ">
         <img src={image} className="card-img-top" alt="err" />
         <div className="card-body">

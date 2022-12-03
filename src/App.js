@@ -8,24 +8,44 @@ import { useState } from "react";
 
 function App() {
   const [houses, setHouses] = useState(Data);
+  const [filter, setFilter] = useState({
+    location: "",
+    price: "",
+    property: "",
+    Date: "",
+  });
+
+  const selectData = () => {
+    let result = Data;
+    if (filter.location != "") {
+      result = Data.filter((item) => item.location == filter.location);
+    }
+
+    if (filter.price != "") {
+      result = Data.filter((item) => item.price == filter.price);
+    }
+
+    if (filter.property != "") {
+      result = Data.filter((item) => item.property == filter.property);
+    }
+    if (filter.date != "") {
+      result = Data.filter((item) => item.date == filter.Date);
+    }
+    setHouses(result);
+  };
 
   const filterLocation = (e) => {
     const location = e.target.value;
-
-    let newHousesList = Data.filter((item) => item.location === location);
-    setHouses(newHousesList);
+    setFilter({ ...filter, location: e.target.value });
   };
-
-  const filterSearch = () => {};
   const filterPrice = (e) => {
     const price = e.target.value;
-    let newPricelist = Data.filter((item) => item.price === price);
-    setHouses(newPricelist);
+    setFilter({ ...filter, price: e.target.value });
   };
+
   const filterProperty = (e) => {
     const Property = e.target.value;
-    const newProperty = Data.filter((item) => item.property === Property);
-    setHouses(newProperty);
+    setFilter({ ...filter, property: e.target.value });
   };
 
   const searchByTitle = (e) => {
@@ -33,10 +53,14 @@ function App() {
     const newTitle = Data.filter((item) => item.title === Title);
     setHouses(newTitle);
   };
+  const filterDate = (e) => {
+    const Date = e.target.value;
+    setFilter({ ...filter, Date: e.target.value });
+  };
 
   return (
     <main className="App ">
-      <div>
+      <div className="">
         <Navbar />
       </div>
       <section className=" container py-3 ">
@@ -61,19 +85,31 @@ function App() {
         </div>
         <div className="d-flex w-100   py-4 filter-background  my-5">
           <Filter
-            lable={" Loacton"}
+            label={" Location"}
             Heading
             choose={["Noida", "Goa", "Pune", "Agra"]}
             onChange={filterLocation}
           />
-          <Filter lable={" when"} Heading choose={["23.10.2019"]} />
           <Filter
-            lable={" price"}
+            label={" when"}
+            Heading
+            choose={[
+              "23.10.2019",
+              "24.10.2019",
+              "22.10.2019",
+              "25.10.2019",
+              "27.10.2019",
+              "26.10.2019",
+            ]}
+            onChange={filterDate}
+          />
+          <Filter
+            label={" price"}
             choose={["1100", "1200", "1500", "1000", "1600", "900", "2200"]}
             onChange={filterPrice}
           />
           <Filter
-            lable={" Property type"}
+            label={" Property type"}
             choose={[
               "house",
               "flat",
@@ -90,7 +126,7 @@ function App() {
           >
             <button
               className=" border-0 text-white button-search px-4 "
-              onClick={filterSearch}
+              onClick={selectData}
             >
               Search
             </button>

@@ -5,7 +5,7 @@ import logo from "../logo.png";
 
 function Navbar() {
   return (
-    <main className=" d-flex   mb-2 Navbar ">
+    <main className=" d-flex  mb-2 Navbar ">
       <div className=" col-2  justify-content-center align-items-center d-flex">
         <img src={logo} className="icon-size " alt="error" />
       </div>
