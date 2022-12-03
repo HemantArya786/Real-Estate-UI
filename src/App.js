@@ -15,6 +15,8 @@ function App() {
     let newHousesList = Data.filter((item) => item.location === location);
     setHouses(newHousesList);
   };
+
+  const filterSearch = () => {};
   const filterPrice = (e) => {
     const price = e.target.value;
     let newPricelist = Data.filter((item) => item.price === price);
@@ -31,6 +33,7 @@ function App() {
     const newTitle = Data.filter((item) => item.title === Title);
     setHouses(newTitle);
   };
+
   return (
     <main className="App ">
       <div>
@@ -85,7 +88,10 @@ function App() {
             style={{ flex: 1 }}
             className=" d-flex justify-content-center  my-2 "
           >
-            <button className=" border-0 text-white button-search px-4 ">
+            <button
+              className=" border-0 text-white button-search px-4 "
+              onClick={filterSearch}
+            >
               Search
             </button>
           </div>
