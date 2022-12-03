@@ -25,6 +25,12 @@ function App() {
     const newProperty = Data.filter((item) => item.property === Property);
     setHouses(newProperty);
   };
+
+  const searchByTitle = (e) => {
+    const Title = e.target.value;
+    const newTitle = Data.filter((item) => item.title === Title);
+    setHouses(newTitle);
+  };
   return (
     <main className="App ">
       <div>
@@ -32,7 +38,23 @@ function App() {
       </div>
       <section className=" container py-3 ">
         <div>
-          <Heading search={["hello", "big", "name", "start"]} />
+          <Heading
+            search={[
+              "townhouse 1",
+              "townhouse 2",
+              "townhouse 3",
+              "townhouse 4",
+              "townhouse 5",
+              "townhouse 6",
+              "townhouse 7",
+              "townhouse 8",
+              "townhouse 9",
+              "townhouse 10",
+              "townhouse 11",
+              "townhouse 12",
+            ]}
+            onChange={searchByTitle}
+          />
         </div>
         <div className="d-flex w-100   py-4 filter-background  my-5">
           <Filter
@@ -41,11 +63,7 @@ function App() {
             choose={["Noida", "Goa", "Pune", "Agra"]}
             onChange={filterLocation}
           />
-          <Filter
-            lable={" when"}
-            Heading
-            choose={["23.10.2019", "big", "23.10.21", "start"]}
-          />
+          <Filter lable={" when"} Heading choose={["23.10.2019"]} />
           <Filter
             lable={" price"}
             choose={["1100", "1200", "1500", "1000", "1600", "900", "2200"]}

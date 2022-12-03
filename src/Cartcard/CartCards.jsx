@@ -6,7 +6,7 @@ import { CiSquareAlert } from "react-icons/ci";
 import { FiHeart } from "react-icons/fi";
 
 function CartCard({ classname, data }) {
-  const { title, bed, bathroom, area, price, dis, image } = data;
+  const { title, room, bathroom, area, price, dis, image } = data;
   return (
     <main
       //  className={`col-sm-4 my-3 gap-3 border border-success d-flex justify-content-center ${classname}`}
@@ -36,7 +36,7 @@ function CartCard({ classname, data }) {
                 <BiBed className="icon-color" />
               </div>
 
-              <div className="cate-color  ">{bed}</div>
+              <div className="cate-color  ">{room}</div>
             </div>
             <div className="col-sm-4  d-flex justify-content-center align-items-center ">
               <div>
