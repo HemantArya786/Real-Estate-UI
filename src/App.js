@@ -40,7 +40,6 @@ function App() {
   };
 
   const filterLocation = (e) => {
-    const location = e.target.value;
     setFilter({ ...filter, location: e.target.value });
   };
   const filterPrice = (e) => {
