@@ -9,6 +9,7 @@ import { useState } from "react";
 function App() {
   const [houses, setHouses] = useState(Data);
   const [filter, setFilter] = useState({
+    title: "",
     location: "",
     price: "",
     property: "",
@@ -20,21 +21,21 @@ function App() {
 
     if (filter.location !== "") {
       result = Data.filter((item) => item.location === filter.location);
-      console.log(result);
+    }
+
+    if (filter.title !== "") {
+      result = Data.filter((item) => item.title === filter.title);
     }
 
     if (filter.price !== "") {
       result = Data.filter((item) => item.price === filter.price);
-      console.log(result);
     }
 
     if (filter.property !== "") {
       result = Data.filter((item) => item.property === filter.property);
-      console.log(result);
     }
     if (filter.date !== "") {
       result = Data.filter((item) => item.date === filter.date);
-      console.log(result);
     }
     setHouses(result);
   };
@@ -79,7 +80,10 @@ function App() {
               "townhouse 11",
               "townhouse 12",
             ]}
-            onChange={searchByTitle}
+            onChange={(e) => {
+              searchByTitle(e);
+              selectData();
+            }}
           />
         </div>
         <div className="d-flex w-100   py-4 filter-background  my-5">
