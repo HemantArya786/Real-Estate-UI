@@ -19,3 +19,16 @@
 .Navbar {
   background-color: rgb(255, 255, 255) !important;
 }
+@media only screen and (max-width: 600px) {
+  .nav-mid-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .nav-icon-container {
+    padding: 10px;
+    width: 100%;
+  }
+  .button-section-div {
+    width: 100%;
+  }
+}

@@ -37,6 +37,7 @@ function App() {
     if (filter.date !== "") {
       result = Data.filter((item) => item.date === filter.date);
     }
+
     setHouses(result);
   };
 
@@ -86,15 +87,15 @@ function App() {
             }}
           />
         </div>
-        <div className="d-flex w-100   py-4 filter-background  my-5">
+        <div className="d-flex w-100 flex-wrap  py-4 filter-background  my-5">
           <Filter
-            label={" Location"}
+            label={"Location"}
             Heading
             choose={["Noida", "Goa", "Pune", "Agra"]}
             onChange={filterLocation}
           />
           <Filter
-            label={" when"}
+            label={"when"}
             Heading
             choose={[
               "23.10.2019",
@@ -107,12 +108,12 @@ function App() {
             onChange={filterDate}
           />
           <Filter
-            label={" price"}
+            label={"price"}
             choose={["1100", "1200", "1500", "1000", "1600", "900", "2200"]}
             onChange={filterPrice}
           />
           <Filter
-            label={" Property type"}
+            label={"Property type"}
             choose={[
               "house",
               "flat",
@@ -125,7 +126,7 @@ function App() {
           />
           <div
             style={{ flex: 1 }}
-            className=" d-flex justify-content-center  my-2 "
+            className=" d-flex justify-content-center flex-wrap  my-2 "
           >
             <button
               className=" border-0 text-white button-search px-4 "
