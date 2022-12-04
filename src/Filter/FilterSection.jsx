@@ -16,7 +16,7 @@ function Filter({ label, choose, onChange }) {
             Choose
           </option>
           {choose.map((item) => (
-            <option>{item}</option>
+            <option key={item.title}>{item}</option>
           ))}
         </select>
       </div>
