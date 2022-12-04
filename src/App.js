@@ -12,24 +12,29 @@ function App() {
     location: "",
     price: "",
     property: "",
-    Date: "",
+    date: "",
   });
 
   const selectData = () => {
     let result = Data;
-    if (filter.location != "") {
-      result = Data.filter((item) => item.location == filter.location);
+
+    if (filter.location !== "") {
+      result = Data.filter((item) => item.location === filter.location);
+      console.log(result);
     }
 
-    if (filter.price != "") {
-      result = Data.filter((item) => item.price == filter.price);
+    if (filter.price !== "") {
+      result = Data.filter((item) => item.price === filter.price);
+      console.log(result);
     }
 
-    if (filter.property != "") {
-      result = Data.filter((item) => item.property == filter.property);
+    if (filter.property !== "") {
+      result = Data.filter((item) => item.property === filter.property);
+      console.log(result);
     }
-    if (filter.date != "") {
-      result = Data.filter((item) => item.date == filter.Date);
+    if (filter.date !== "") {
+      result = Data.filter((item) => item.date === filter.date);
+      console.log(result);
     }
     setHouses(result);
   };
@@ -39,23 +44,18 @@ function App() {
     setFilter({ ...filter, location: e.target.value });
   };
   const filterPrice = (e) => {
-    const price = e.target.value;
     setFilter({ ...filter, price: e.target.value });
   };
 
   const filterProperty = (e) => {
-    const Property = e.target.value;
     setFilter({ ...filter, property: e.target.value });
   };
 
   const searchByTitle = (e) => {
-    const Title = e.target.value;
-    const newTitle = Data.filter((item) => item.title === Title);
-    setHouses(newTitle);
+    setFilter({ ...filter, title: e.target.value });
   };
   const filterDate = (e) => {
-    const Date = e.target.value;
-    setFilter({ ...filter, Date: e.target.value });
+    setFilter({ ...filter, date: e.target.value });
   };
 
   return (
